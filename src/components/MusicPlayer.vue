@@ -1,9 +1,9 @@
 
 <template>
-  <div>
+  <section>
     <img class="songCover" :src="songData.featured_image_url"/>
     <audio-player :sources="audioSources" :loop="true"></audio-player>
-  </div>
+  </section>
 </template>
 
 <script>

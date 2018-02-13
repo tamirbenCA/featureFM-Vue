@@ -31,6 +31,10 @@ export default {
   align-items: flex-start;
 }
 
+h2, p {
+  color: white;
+}
+
 h2 {
   font-size: 2em;
 }
