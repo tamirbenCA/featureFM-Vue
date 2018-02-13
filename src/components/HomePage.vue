@@ -10,7 +10,6 @@
     </div>
     <div class="side-bar">
       <side-bar :songData=getSongData></side-bar>
-      <!-- {{getSongData}} -->
     </div>
   </section>
 </template>
@@ -51,15 +50,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
+
 .main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;  
 }
 
+.music-player {
+  margin-right: 20px;
+}
 
 </style>

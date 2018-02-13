@@ -1,8 +1,15 @@
 <template>
   <section class="side-bar">
-      <h1>{{songData.title}}</h1>
-      <h2>{{songData.description}}</h2>
-      <router-link :to="buttonInfo.cta.url" tag="button" v-for="(buttonInfo, index) in songData.services" :key="index"><img class="button-logo" :src="buttonInfo.logo"></router-link>
+      <h2>{{songData.title}}</h2>
+      <p class="p-description">{{songData.description}}</p>
+      <!-- <router-link :to="buttonInfo.cta.url" tag="button" v-for="(buttonInfo, index) in songData.services" :key="index"><img class="button-logo" :src="buttonInfo.logo"></router-link> -->
+      <button v-for="(buttonInfo, index) in songData.services" :key="index"><a :href="buttonInfo.cta.url"><img class="button-logo" :src="buttonInfo.logo"></a></button>
+      <p class="p-terms">By using this service you agree to our Privacy Policy and Terms of Use.</p>
+      <p class="terms-links">
+        <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558828-Privacy-Policy">Privacy Policy</a>
+        <a>|</a>
+        <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558908-Terms-of-Use">Terms</a>
+      </p>
   </section>
 </template>
 
@@ -13,22 +20,6 @@ export default {
     return {
     }
   },
-  // methods: {
-  //   playSong() {
-  //     console.log('Play Song');
-  //     // this.$store.getters({ type: "createPlayers", count: this.playersAmount });
-  //     // this.$router.push("/createPlayers");
-  //   },
-  //   downloadSong() {
-  //     console.log('Download Song');
-
-  //   }
-  // },
-  created() {
-    // this.players = this.$store.state.players
-    // this.players = JSON.parse(JSON.stringify(this.$store.state.players))
-    // console.log('Players in createplayers created:', this.players)
-  },
 }
 </script>
 
@@ -37,10 +28,44 @@ export default {
 .side-bar {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.p-description {
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
 .button-logo {
-  /* width: 30px; */
   height: 30px;
+}
+
+button {
+  width: 320px;
+  height: 60px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+button:first-of-type {
+  background-color: #30d567;
+}
+
+button:nth-child(3) > a > img {
+  filter: brightness(0) invert(1);
+}
+
+.terms-links > a {
+  text-decoration-line: none;
+  color: inherit;
+  margin-right: 10px;
+}
+
+.terms-links > a:hover {
+  font-weight: bold;
 }
 </style>
