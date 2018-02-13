@@ -1,5 +1,3 @@
-
-
 <template>
   <section v-if="!songData">
     <img src="../assets/loading.gif"/>

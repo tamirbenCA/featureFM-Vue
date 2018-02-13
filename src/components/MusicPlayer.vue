@@ -1,4 +1,3 @@
-
 <template>
   <section>
     <img class="songCover" :src="songData.featured_image_url"/>
