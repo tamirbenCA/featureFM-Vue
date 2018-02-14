@@ -57,7 +57,7 @@ export default {
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  filter: blur(20px);
+  filter: blur(25px);
   opacity: 0.7;
 }
 
