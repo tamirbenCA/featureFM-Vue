@@ -97,6 +97,11 @@ button:nth-child(3) > a > img {
     width: 90vw;
     height: 10vh;
   }
+
+  .terms-links {
+    display: flex;
+    justify-content: center;
+  }
   .terms-links > a:hover {
     font-weight: normal;
   }
