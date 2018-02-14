@@ -87,6 +87,7 @@ export default {
   }
   .main-container {
     flex-direction: column;
+    justify-content: flex-start;
   }
   .music-player {
     margin-right: 0px;

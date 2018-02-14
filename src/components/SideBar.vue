@@ -77,18 +77,10 @@ button:nth-child(3) > a > img {
   .side-bar {
     align-items: center;
   }
-
-  .button-logo {
-    height: 20px;
-  }
-
   button {
-    width: 320px;
-    height: 40px;
-    cursor: pointer;
-    margin: 10px 0px;
+    width: 90vw;
+    height: 10vh;
   }
-
   .terms-links > a:hover {
     font-weight: normal;
   }
