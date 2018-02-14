@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "bootstrap": "^3.3.7",
     "vue": "^2.5.2",
     "vue-howler": "^0.7.0",
     "vue-router": "^3.0.1",
