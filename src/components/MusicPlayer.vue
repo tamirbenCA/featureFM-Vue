@@ -26,7 +26,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cover-responsive {
-  max-width: 352px;
+  max-width: 412px;
   height: auto;
   cursor: pointer;
   width: 100%;
