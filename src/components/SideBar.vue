@@ -4,12 +4,14 @@
       <p class="p-description">{{songData.description}}</p>
       <!-- <router-link :to="buttonInfo.cta.url" tag="button" v-for="(buttonInfo, index) in songData.services" :key="index"><img class="button-logo" :src="buttonInfo.logo"></router-link> -->
       <button v-for="(buttonInfo, index) in songData.services" :key="index"><a :href="buttonInfo.cta.url"><img class="button-logo" :src="buttonInfo.logo"></a></button>
-      <p class="p-terms">By using this service you agree to our Privacy Policy and Terms of Use.</p>
-      <p class="terms-links">
-        <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558828-Privacy-Policy">Privacy Policy</a>
-        <a>|</a>
-        <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558908-Terms-of-Use">Terms</a>
-      </p>
+      <div class="disclaimer">
+        <p class="p-terms">By using this service you agree to our Privacy Policy and Terms of Use.</p>
+          <div class="terms-links">
+            <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558828-Privacy-Policy">Privacy Policy</a>
+            <a>|</a>
+            <a href="https://featurefm.zendesk.com/hc/en-us/articles/209558908-Terms-of-Use">Terms</a>
+          </div>
+      </div>
   </section>
 </template>
 
@@ -36,12 +38,12 @@ h2, p {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .p-description {
-  font-weight: 400;
-  font-size: 1.2em;
+  margin-top: 20px;
+  height: auto;
 }
 
 .button-logo {
@@ -62,15 +64,28 @@ button:first-of-type {
 button:nth-child(3) > a > img {
   filter: brightness(0) invert(1);
 }
+.terms-links {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0px;
+  font-size: 12px;
+}
 
 .terms-links > a {
   text-decoration-line: none;
-  color: inherit;
+  color: #fff;
   margin-right: 10px;
 }
 
 .terms-links > a:hover {
   font-weight: bold;
+}
+
+.p-terms {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #ccc;
 }
 
 @media screen and (max-width: 480px) {
