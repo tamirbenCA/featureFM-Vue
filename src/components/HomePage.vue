@@ -66,8 +66,8 @@ export default {
   flex-direction: row;
   justify-content: center;
   height: 100vh;
-
 }
+
 .music-player {
   display: flex;
   flex-direction: column;
@@ -79,5 +79,17 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .main-bg {
+    position: fixed;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .music-player {
+    margin-right: 0px;
+  }
 }
 </style>

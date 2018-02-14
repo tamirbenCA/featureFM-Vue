@@ -1,6 +1,6 @@
 <template>
   <section>
-    <img class="songCover" :src="songData.featured_image_url"/>
+    <img class="cover-responsive" :src="songData.featured_image_url"/>
     <audio-player :sources="audioSources" :loop="true"></audio-player>
   </section>
 </template>
@@ -25,9 +25,10 @@
   
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.songCover {
+.cover-responsive {
   max-width: 352px;
-  /* height: 100px; */
+  height: auto;
   cursor: pointer;
+  width: 100%;
 }
 </style>

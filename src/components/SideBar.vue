@@ -72,4 +72,26 @@ button:nth-child(3) > a > img {
 .terms-links > a:hover {
   font-weight: bold;
 }
+
+@media screen and (max-width: 480px) {
+  .side-bar {
+    align-items: center;
+  }
+
+  .button-logo {
+    height: 20px;
+  }
+
+  button {
+    width: 320px;
+    height: 40px;
+    cursor: pointer;
+    margin: 10px 0px;
+  }
+
+  .terms-links > a:hover {
+    font-weight: normal;
+  }
+}
+
 </style>
