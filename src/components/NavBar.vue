@@ -1,8 +1,8 @@
 <template>
     <section class="nav-bar">
-        <router-link to="/jamesblakecar" tag="button">James Blake</router-link>
-        <router-link to="/savetherunts" tag="button">Awolnation</router-link>
-        <router-link to="/jhenesativa" tag="button">Jhene Aiko</router-link>
+        <router-link to="/jamesblakecar" tag="li">James Blake</router-link>
+        <router-link to="/savetherunts" tag="li">Awolnation</router-link>
+        <router-link to="/jhenesativa" tag="li">Jhene Aiko</router-link>
     </section>
 </template>
 
@@ -26,8 +26,15 @@ export default {
 }
 
 .router-link-active {
-    color: orange
+    color: orange;
+    font-weight: bold;
 }
 
+li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0px 10px;
+    color: white;
+}
 
 </style>

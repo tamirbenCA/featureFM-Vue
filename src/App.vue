@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <nav-bar/>
+      <span><nav-bar/></span>
     </nav>
     <router-view/>
   </div>
@@ -33,5 +33,12 @@ export default {
 nav {
   display: flex;
   justify-content: center;
+}
+nav span {
+  visibility: hidden;
+}
+
+nav:hover span {
+  visibility: visible;
 }
 </style>
