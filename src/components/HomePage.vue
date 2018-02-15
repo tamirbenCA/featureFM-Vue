@@ -21,6 +21,7 @@ import SideBar from './SideBar';
 import { GET_DATA } from '../store/'
 
 export default {
+  name: 'HomePage',
   components: {
     MusicPlayer,
     SideBar
@@ -42,9 +43,14 @@ export default {
     this.shortId = this.$route.params.shortId;
     // console.log('shortId:', this.shortId);
     this.$store.dispatch({ type: GET_DATA, shortId: this.shortId})
-    // console.log('song data:', this.songData)
-    
-  }
+    // console.log('song data:', this.songData) 
+  },
+   watch: {
+    '$route.params.shortId'() {
+      this.shortId = this.$route.params.shortId;
+      this.$store.dispatch({ type: GET_DATA, shortId: this.shortId})
+    }
+  },
 };
 </script>
 

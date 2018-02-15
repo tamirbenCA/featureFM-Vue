@@ -1,12 +1,20 @@
 <template>
   <div id="app">
+    <nav>
+      <nav-bar/>
+    </nav>
     <router-view/>
   </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar';
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    NavBar
+  }
 }
 </script>
 
@@ -22,8 +30,7 @@ export default {
   margin-top: 60px;
 }
 
-.logo-header {
-  height: 150px;
+nav {
   display: flex;
   justify-content: center;
 }
